@@ -7,16 +7,18 @@ library("STRbook")
 library("grid")
 library("gridExtra")
 library("lubridate")
+
+
 ## ------------------------------------------------------------------------
-setwd('/home/ivo/Downloads/PhD-Data-code/')
+
 
 ## load the soil moisture data 
 
-Siloam_orig <- readRDS('SPdata')
+Siloam_orig <- readRDS('Siloam1')
 
-## load the atmospheric data and wrangle date and time column
+## load the spatial locations data
 
-Atmos_orig <- read_excel('2012-2017Atmosph.xlsx')
+Locs_orig <- read.csv('spatial_location_probes.csv')
 
 ##----------------------------------------------------------------------
 
