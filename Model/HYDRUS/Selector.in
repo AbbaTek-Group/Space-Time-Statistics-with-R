@@ -1,0 +1,46 @@
+Pcp_File_Version=4
+*** BLOCK A: BASIC INFORMATION *****************************************
+Heading
+infiltration of water to soil
+LUnit  TUnit  MUnit  (indicated units are obligatory for all input data)
+cm
+hours
+mmol
+lWat   lChem lTemp  lSink lRoot lShort lWDep lScreen lVariabBC lEquil lInverse
+ t     f     f      t     f     f      f     t       t         t         f
+lSnow  lHP1   lMeteo  lVapor lActiveU lFluxes lIrrig  lDummy  lDummy  lDummy
+ f       f       f       f       f       t       f       f       f       f
+NMat    NLay  CosAlpha
+  3       2       1
+*** BLOCK B: WATER FLOW INFORMATION ************************************
+MaxIt   TolTh   TolH       (maximum number of iterations and tolerances)
+  15     0.01      5
+TopInf WLayer KodTop InitCond
+ t     t      -1       f
+BotInf qGWLF FreeD SeepF KodBot DrainF  hSeep
+ f     t     f     f     -1      f      0
+        GWL0L         Aqh          Bqh
+2107.45739565219 -0.666848570051578 -0.00834695942577034
+    hTab1   hTabN
+    1e-005   15000
+    Model   Hysteresis
+      0          0
+   thr     ths    Alfa      n         Ks       l
+0.109606149643017 0.500015207171334 0.0298010935774453 1.4999603646901 1.49998755201586 0.400147401934967
+0.109775915579299 0.500013932940475 0.299671734968506 1.27330423707059 1.00009866054067 0.599850820131693
+0.133802478572498 0.502943343736249 0.0555013400967052 1.60753976319695 5.63658002667629 0.557138067060724
+*** BLOCK C: TIME INFORMATION ******************************************
+        dt       dtMin       dtMax     DMul    DMul2  ItMin ItMax  MPL
+      0.001      0.0001        0.05     1.3     0.7     3     7    0
+      tInit        tMax
+          0        6000
+  lPrintD  nPrintSteps tPrintInterval lEnter
+     t        10000            1.       f
+TPrint(1),TPrint(2),...,TPrint(MPL)
+    1.0
+*** BLOCK G: ROOT WATER UPTAKE INFORMATION *****************************
+     Model  (0 - Feddes, 1 - S shape)  cRootMax    OmegaC
+        1                                   1
+       h50       P3
+     -800         1
+*** END OF INPUT FILE 'SELECTOR.IN' ************************************
