@@ -15,6 +15,6 @@
 #
 # installs each package from the stored list of packages
 
-load("/home/analysis/installed_packages.rda")
+load("installed_packages.rda")
 
 for (count in 1:length(installedpackages)) install.packages(installedpackages[count])
